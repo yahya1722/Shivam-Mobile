@@ -1,0 +1,76 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true"  CodeBehind="adminsite.master.cs" Inherits="Shivam_Mobile.admin.adminsite" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="../Bootstrap/Css/5.0.2.bootstrap.min.css" rel="stylesheet" />
+    <link href="../Bootstrap/Css/Clinet_Master.css" rel="stylesheet" />
+    <script src="../Bootstrap/js/5.0.2_dist_js_bootstrap.bundle.min.js"></script>
+    <script src="../Bootstrap/js/jquery-3.2.1.slim.min.js"></script>
+    <script src="../Bootstrap/js/js_bootstrap.min.js"></script>
+    <link href="../Fontawesome/css/all.css" rel="stylesheet" />
+    <script src="../Bootstrap/js/popperjs_core@2.9.2_dist_umd_popper.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="sticky-top navbar-light bg-light">
+            <%--header--%>         
+            <%--logo--%>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+              <a class="navbar-brand" href="default.aspx">
+                <img src="../Icon/logo.png" alt="Shivam Mobile" height="75px" style="width:200px;" /></a>
+
+              <%--navigation--%>              
+                
+
+                <div class="mx-auto" id="navbarNav">
+                    <h4>
+                    
+                    <asp:Menu ID="AdMenu" runat="server" Orientation="Horizontal" style="text-align: left" CssClass="navbar-nav ml-auto" ForeColor="White" StaticSubMenuIndent="25px" OnMenuItemClick="Menu2_MenuItemClick">
+                    <DynamicHoverStyle ForeColor="White" />
+                    <DynamicMenuItemStyle BackColor="#212529" ForeColor="#CCCCCC" HorizontalPadding="20px" ItemSpacing="5px" VerticalPadding="10px" />
+                    <Items>
+                        <asp:MenuItem Text="Product"  Value="Product" NavigateUrl="~/admin/viewproduct.aspx">
+                            <asp:MenuItem Text="Add Product"  NavigateUrl="~/admin/addproduct.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="View Product"  NavigateUrl="~/admin/viewproduct.aspx"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/admin/User.aspx" Text="User" Value="User"></asp:MenuItem>
+                        <asp:MenuItem Text="Order" Value="Client" NavigateUrl="~/admin/Clientdetails.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Contact" Value="Contact" NavigateUrl="~/admin/adm_contact.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Logout" Value="Logout" NavigateUrl="~/admin/logout.aspx"></asp:MenuItem>
+                    </Items>
+                      <StaticHoverStyle ForeColor="White" />
+                      <StaticMenuItemStyle Font-Size="X-Large" ForeColor="Silver" HorizontalPadding="30px" />
+                      <StaticSelectedStyle ForeColor="White" />
+                      </asp:Menu>
+                    </h4>
+                    </div>
+                <div class="ml-auto">
+                <asp:Label ID="ss" runat="server" Font-Size="25px" ForeColor="White"></asp:Label>
+                    </div>
+                 </nav>
+            </div>
+       
+                    
+              
+        <%--main containt--%>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+              </asp:ContentPlaceHolder>
+        </div>
+
+
+    </form> 
+    
+                  <div class="col-md-12 text-center bg-dark text-light">
+                    <p>&copy; 2023 Shivam Mobile. All rights reserved.</p>
+                  </div>
+               
+              
+
+</body>
+</html>

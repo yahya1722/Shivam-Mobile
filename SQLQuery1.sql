@@ -1,0 +1,2 @@
+﻿ALTER TABLE Register
+ALTER COLUMN Password NVARCHAR(MAX); 
