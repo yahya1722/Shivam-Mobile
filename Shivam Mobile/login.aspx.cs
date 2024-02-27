@@ -33,23 +33,64 @@ namespace Shivam_Mobile
 
             if (dr.HasRows)
             {
-                while (dr.Read())
-                {
-                    string storedPasswordHash = dr["Password"].ToString();
+                dr.Read(); // Remove the unnecessary while loop
 
-                    // Compare hashed passwords
-                    if (string.Equals(storedPasswordHash, hashedEnteredPassword, StringComparison.OrdinalIgnoreCase))
-                    {
-                        // Successful login
-                        Session["user"] = enteredUsername;
-                        Response.Redirect("default.aspx");
-                    }
-                    else
-                    {
-                        // Invalid login credentials
-                        Response.Write("<script>alert('Username and Password do not match')</script>");
-                        username.Focus();
-                    }
+                string storedPasswordHash = dr["Password"].ToString();
+
+                // Compare hashed passwords
+                if (string.Equals(storedPasswordHash, hashedEnteredPassword, StringComparison.OrdinalIgnoreCase))
+                {
+                    // Successful login
+                    Session["user"] = enteredUsername;
+                    Response.Redirect("default.aspx");
+                }
+                else
+                {
+                    // Invalid login credentials
+                    Response.Write("<script>alert('Username and Password do not match')</script>");
+                    username.Focus();
+                }
+            }
+            else
+            {
+                // Invalid login credentials
+                Response.Write("<script>alert('Username not found')</script>");
+                username.Text = "";
+                password.Text = "";
+                username.Focus();
+            }
+
+            dr.Close();
+        }
+        protected void login1_Click(object sender, EventArgs e)
+        {
+            string enteredUsername = username.Text;
+            string enteredPassword = password.Text;
+            string hashedEnteredPassword = HashPassword(enteredPassword); // Hash the entered password
+
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Register WHERE Username = @Username", con);
+            cmd.Parameters.AddWithValue("@Username", enteredUsername);
+
+            SqlDataReader dr = cmd.ExecuteReader();
+
+            if (dr.HasRows)
+            {
+                dr.Read(); // Remove the unnecessary while loop
+
+                string storedPasswordHash = dr["Password"].ToString();
+
+                // Compare hashed passwords
+                if (string.Equals(storedPasswordHash, hashedEnteredPassword, StringComparison.OrdinalIgnoreCase))
+                {
+                    // Successful login
+                    Session["user"] = enteredUsername;
+                    Response.Redirect("default.aspx");
+                }
+                else
+                {
+                    // Invalid login credentials
+                    Response.Write("<script>alert('Username and Password do not match')</script>");
+                    username.Focus();
                 }
             }
             else

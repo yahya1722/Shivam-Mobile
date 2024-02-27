@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Sing Up</title>
+    <title>Sign Up</title>
     <style>
         * {
       box-sizing: border-box;
