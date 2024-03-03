@@ -21,7 +21,7 @@ namespace Shivam_Mobile
             }
             con.Open();
         }
-
+        // Add Hash password logic on register 
         protected void singup_Click(object sender, EventArgs e)
         {
             string username = newusername.Text;
@@ -63,7 +63,7 @@ namespace Shivam_Mobile
 
             dr1.Close();
         }
-
+        // Add mailtrap on this 
         private void SendRegistrationEmail(string toEmail)
         {
             toEmail = toEmail?.Trim();
