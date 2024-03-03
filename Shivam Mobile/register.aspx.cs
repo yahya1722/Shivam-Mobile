@@ -51,7 +51,7 @@ namespace Shivam_Mobile
                 // Send registration confirmation email
                 SendRegistrationEmail(email);
 
-                Response.Write("<script>alert('Thanks For Signing up!')</script>")
+                Response.Write("<script>alert('Thanks For Signing up!')</script>");
                 Response.Redirect("login.aspx");
             }
             else
