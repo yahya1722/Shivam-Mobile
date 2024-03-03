@@ -84,15 +84,12 @@
                 </form>
             </div>
 
-            <div class="col-lg-6 right" style="margin-top:1%;margin-bottom:3%">
-                <div id="map-container-google-1" class="z-depth-1-half map-container justify-content-end"
-                    style="height: 500px ">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3711.7581774345635!2d70.45880197514312!3d21.517189980257196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395801bad9545d31%3A0x64851c70346fd47f!2sshivam%20mobile!5e0!3m2!1sen!2sin!4v1690467834611!5m2!1sen!2sin"
-                        frameborder="0" style="border:0" allowfullscreen title="Shivam Moblie Map"></iframe>
+          <div class="col-lg-6 right" style="margin-top:1%;margin-bottom:3%">
+    <div id="map-container-google-1" class="z-depth-1-half map-container justify-content-end" style="height: 500px">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3706.295097156609!2d70.44468237473335!3d21.73008246332297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39581e101faf590b%3A0xb19d504e2257c3c!2sStation%20Rd%2C%20New%20Dhoraji%2C%20Dhoraji%2C%20Gujarat%20360410!5e0!3m2!1sen!2sin!4v1709486795910!5m2!1sen!2sin" frameborder="0" style="border:0" allowfullscreen title="Mobile Management Map"></iframe>
+    </div>
+</div>
 
-                </div>
-            </div>
 
         </div>
     </div>

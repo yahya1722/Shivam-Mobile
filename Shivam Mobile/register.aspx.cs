@@ -111,7 +111,7 @@ namespace Shivam_Mobile
 
                     using (MailMessage mailMessage = new MailMessage())
                     {
-                        mailMessage.From = new MailAddress("yahyadangra5@gmail.com"); // Replace with your sender email address
+                        mailMessage.From = new MailAddress("MobileManagment@gmail.com"); // Replace with your sender email address
                         mailMessage.To.Add(toEmail);
                         mailMessage.Subject = "Registration Confirmation";
                         mailMessage.Body = "Thank you for registering with us! Your registration is now complete.";
