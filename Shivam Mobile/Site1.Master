@@ -392,28 +392,7 @@
             </script>
                                                                                                                                                                                        
             <%--menu icon--%>
-                <div class="bg-light">
-                    <div class="container">
-                        <div class="row ">
-                            <span>
-                               
-                                <span>
-                                    <a href="product.aspx?pr=Iphone"><img src="Icon/iphone.png" alt="iphone"
-                                            class="col-md-2 menu" height="70%" /></a>
-                                </span>
-                                <span> <a href="product.aspx?pr=Oneplus"><img src="Icon/oneplus.png" alt="oneplus"
-                                            class="col-md-2 menu" height="70%" /></a></span>
-                                <span> <a href="product.aspx?pr=Samsung"><img src="Icon/samsung.png" alt="samsung"
-                                            class="col-md-2 menu" /></a></span>
-                                <span><a href="product.aspx?pr=Vivo"><img src="Icon/vivo.png" alt="vivo"
-                                            class="col-md-2 menu" /></a></span>
-                                <span><a href="product.aspx?pr=Realme"><img src="Icon/realme.png" alt="realme"
-                                            class="col-md-2 menu" /></a>
-                                </span>
-                            </span>
-                        </div>
-                    </div>
-                </div>
+                
 
 
                 <%--Main Content Placeholder--%>
